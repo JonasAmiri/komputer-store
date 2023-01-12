@@ -2,3 +2,23 @@ h1 {
     color: blue;
     text-align: center;
 }
+#btnOne{
+    font-size: 20px;
+    margin: 20px;
+    position: absolute;
+    transform: translate(-100%, 500%);
+    
+}
+#btnBank{
+    font-size: 20px;
+        margin: 20px;
+        position: absolute;
+        transform: translate(-190%, 500%);
+}
+#btnWork{
+    font-size: 20px;
+        margin: 20px;
+        position: absolute;
+        transform: translate(-20%, 500%);
+    
+}

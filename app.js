@@ -1,4 +1,6 @@
 const laptopsElement = document.getElementById("laptops");
+const featuresElement = document.getElementById("Features")
+
 
 let laptops = [];
 
@@ -18,5 +20,23 @@ const addLaptopToMenu = (laptop) => {
     laptopElement.appendChild(document.createTextNode(laptop.title));
     laptopsElement.appendChild(laptopElement);
 }
+
+const handleLaptopMenuChange = e=> {
+    const selectedLaptop = laptops[e.target.selectedIndex];
+    featuresElement.innerText = selectedLaptop.specs;
+}
+
+laptopsElement.addEventListener("change", handleLaptopMenuChange );
+
+
+
+
+
+
+
+
+
+
+
 
 

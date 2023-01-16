@@ -22,3 +22,9 @@ h1 {
         transform: translate(-20%, 500%);
     
 }
+#pc{
+    font-size: 20px;
+        margin: 20px;
+        position: absolute;
+        transform: translate(50%, 100%);
+}

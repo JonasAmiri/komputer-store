@@ -28,3 +28,18 @@ h1 {
         position: absolute;
         transform: translate(50%, 100%);
 }
+#Balance{
+        font-size: 20px;
+        margin: 20px;
+        position: absolute;
+        transform: translate(-220%, 200%);
+
+}
+
+#Output {
+    font-size: 20px;
+    margin: 20px;
+    position: absolute;
+    transform: translate(-50%, 200%);
+
+}

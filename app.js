@@ -2,6 +2,7 @@ const laptopsElement = document.getElementById("laptops");
 const featuresElement = document.getElementById("Features")
 
 
+
 let laptops = [];
 
 

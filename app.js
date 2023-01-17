@@ -1,5 +1,9 @@
 const laptopsElement = document.getElementById("laptops");
-const featuresElement = document.getElementById("Features")
+const featuresElement = document.getElementById("Features");
+const informationElement = document.getElementById("information");
+const priceElement = document.getElementById("price");
+const imageElement = document.getElementById("image");
+
 
 
 
@@ -29,6 +33,27 @@ const handleLaptopMenuChange = e=> {
 
 laptopsElement.addEventListener("change", handleLaptopMenuChange );
 
+
+const InformationhandleLaptopMenuChange = e => {
+    const selectedLaptop = laptops[e.target.selectedIndex];
+    informationElement.innerText = selectedLaptop.description;
+}
+
+laptopsElement.addEventListener("change", InformationhandleLaptopMenuChange);
+
+const pricehandleLaptopMenuChange = e => {
+    const selectedLaptop = laptops[e.target.selectedIndex];
+    priceElement.innerText = selectedLaptop.price;
+}
+
+laptopsElement.addEventListener("change", pricehandleLaptopMenuChange);
+
+const imagehandleLaptopMenuChange = e => {
+    const selectedLaptop = laptops[e.target.selectedIndex];
+    imageElement.innerText = selectedLaptop.image;
+}
+
+laptopsElement.addEventListener("change", imagehandleLaptopMenuChange);
 
 
 

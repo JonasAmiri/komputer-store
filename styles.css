@@ -2,7 +2,7 @@ h1 {
     color: blue;
     text-align: center;
 }
-#btnOne{
+#btnLoan{
     font-size: 20px;
     margin: 20px;
     position: absolute;
@@ -37,9 +37,23 @@ h1 {
 }
 
 #Output {
-    font-size: 20px;
+     font-size: 20px;
     margin: 20px;
     position: absolute;
     transform: translate(-50%, 200%);
 
+}
+
+#btnbuy {
+    font-size: 20px;
+    margin: 20px;
+    position: absolute;
+    transform: translate(500%, 500%);
+}
+#image{
+    width: 200px;
+    float: left;
+}
+#show{
+    color: blue;
 }

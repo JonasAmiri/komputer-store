@@ -43,3 +43,31 @@ h1 {
     transform: translate(-50%, 200%);
 
 }
+#image{
+    position: relative;
+    width: "50px";
+    height: "50px";
+    float: left;
+}
+
+#btnLoan{
+    font-size: 20px;
+        margin: 20px;
+        position: absolute;
+        transform: translate(-100%, 500%);
+
+}
+
+#own {
+    font-size: 20px;
+    margin: 50px;
+    position: absolute;
+    transform: translate(-440%, 200%);
+}
+
+#OwnOutput {
+    font-size: 20px;
+    margin: 50px;
+    position: absolute;
+    transform: translate(-340%, 200%);
+}

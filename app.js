@@ -9,6 +9,10 @@ const showWorkElement = document.getElementById("show")
 const showBankElement = document.getElementById("Output")
 const btnBankBalance = document.getElementById("btnBank")
 const btnLoanElement = document.getElementById("btnLoan");
+const showResLoanElement = document.getElementById("OwnOutput");
+const showBuyButtonElement = document.getElementById("btnbuy");
+const showAcceptedlabelElement = document.getElementById("Accept");
+
 
 
 
@@ -109,38 +113,67 @@ btnWorkElement.addEventListener("click", function(){
 let activeLoan = false;
 
 btnBankBalance.addEventListener("click", function(){
-    if(!activeLoan){
-        showBankElement.innerText = parseInt(showWorkElement.innerText) + parseInt(showBankElement.innerText);
+    // if(!activeLoan){
+    //     //showBankElement.innerText = parseInt(showWorkElement.innerText) + parseInt(showBankElement.innerText);
         showWorkElement.innerText = 0;
+        deposit(Number(showBankElement.innerText), activeLoan);
+        
+    // }
+    // else{
+
+    // }
+})
+
+function deposit(amount, loanStatus){
+    if(loanStatus){
+        console.log("hej hej")
+       showBankElement.innerText = Number(showBankElement.innerText) + amount * 0.9;
+       showResLoanElement.innerText = Number(showResLoanElement.innerText) - amount * 0.1;     
+    }
+    else
+    {
+        showBankElement.innerText = Number(showBankElement.innerText) + amount
+        console.log("ja ja ")
+    }
+}
+
+function buyLaptop(){
+    if(Number(priceElement.innerText)<= Number(showBankElement)){
+        showAcceptedlabelElement.innerText = "tillykke du har købt mig";
+        priceElement.innerText - showBankElement;
     }
     else{
-
+        showAcceptedlabelElement.innerText = "rejected";
     }
-})
+}
+
+
+let hasActiveLoan = false;
 
 btnLoanElement.addEventListener("click", function(){
-    let loanTemp = prompt("how much would u like to Loan?");
+    let loanTemp =Number(prompt("how much would u like to Loan?"));
+    
+
+
     console.log(loanTemp);
-    if(!activeLoan){
+
+    
+    if(hasActiveLoan){
+
+
+        // deposit(Number(showBankElement.innerText), hasActiveLoan);
         
-    }
+      
+     } else {
+        if (loanTemp <= parseInt(showBankElement.innerText * 2)){
 
-    if(loanTemp>= parseInt(showBankElement.innerText*2)){
-        console.log("you cant not take a loan")
-    } 
+            showBankElement.innerText = Number(showBankElement.innerText) + loanTemp;
+            showResLoanElement.innerText = loanTemp;
+            hasActiveLoan=true;
 
 
+        }
 
+     }
 })
-
-
-
-
-
-
-
-
-
-
-
 

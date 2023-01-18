@@ -43,3 +43,9 @@ h1 {
     transform: translate(-50%, 200%);
 
 }
+
+#image{
+    float: left;
+    width: 280px
+
+}

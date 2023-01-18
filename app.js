@@ -120,7 +120,7 @@ btnBankBalance.addEventListener("click", function(){
 
 btnLoanElement.addEventListener("click", function(){
     let loanTemp = prompt("how much would u like to Loan?");
-    console.log(sign);
+    console.log(loanTemp);
     if(!activeLoan){
         
     }

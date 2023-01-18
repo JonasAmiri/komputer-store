@@ -104,38 +104,34 @@ showWorkElement.innerText = "0";
 btnWorkElement.addEventListener("click", function(){
 
     showWorkElement.innerText=parseInt(showWorkElement.innerText)+100;
-
-   
-    
-
 });
 
 let activeLoan = false;
 
 btnBankBalance.addEventListener("click", function(){
-    // if(!activeLoan){
-    //     //showBankElement.innerText = parseInt(showWorkElement.innerText) + parseInt(showBankElement.innerText);
+     if(!activeLoan){
+        showBankElement.innerText = parseInt(showWorkElement.innerText) + parseInt(showBankElement.innerText);
         showWorkElement.innerText = 0;
-        deposit(Number(showBankElement.innerText), activeLoan);
+        //deposit(Number(showBankElement.innerText), activeLoan);
         
     // }
     // else{
 
     // }
-})
-
-function deposit(amount, loanStatus){
-    if(loanStatus){
-        console.log("hej hej")
-       showBankElement.innerText = Number(showBankElement.innerText) + amount * 0.9;
-       showResLoanElement.innerText = Number(showResLoanElement.innerText) - amount * 0.1;     
-    }
-    else
-    {
-        showBankElement.innerText = Number(showBankElement.innerText) + amount
-        console.log("ja ja ")
-    }
 }
+
+// function deposit(amount, loanStatus){
+//     if(loanStatus){
+//         console.log("hej hej")
+//        showBankElement.innerText = Number(showBankElement.innerText) + amount * 0.9;
+//        showResLoanElement.innerText = Number(showResLoanElement.innerText) - amount * 0.1;     
+//     }
+//     else
+//     {
+//         showBankElement.innerText = Number(showBankElement.innerText) + amount
+//         console.log("ja ja ")
+//     }
+// }
 
 function buyLaptop(){
     if(Number(priceElement.innerText)<= Number(showBankElement)){
@@ -161,19 +157,22 @@ btnLoanElement.addEventListener("click", function(){
     if(hasActiveLoan){
 
 
-        // deposit(Number(showBankElement.innerText), hasActiveLoan);
+        deposit(Number(showBankElement.innerText), hasActiveLoan);
         
       
-     } else {
-        if (loanTemp <= parseInt(showBankElement.innerText * 2)){
+     } 
+     else 
+     {
+        if (loanTemp <= parseInt(showBankElement.innerText * 2))
+        {
 
             showBankElement.innerText = Number(showBankElement.innerText) + loanTemp;
             showResLoanElement.innerText = loanTemp;
             hasActiveLoan=true;
-
-
         }
 
      }
-})
-
+}
+)
+}
+)
